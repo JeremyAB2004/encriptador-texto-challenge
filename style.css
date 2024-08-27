@@ -3,41 +3,38 @@
     --dark-blue: #0A3871;
     --font-family: "Inter", sans-serif;
 }
-
 * {
     padding: 0;
     margin: 0;
     font-family: var(--font-family);
 }
-
 body{
     background-color: var(--main-bg-color);
 }
-
 header {
     padding: 40px;
     color: var(--dark-blue);
+    display: flex;
+    gap: 30px;
+    text-align: center;
 }
-
 main{
     display: flex;
     padding: 40px;
 }
-
+button{
+    cursor: pointer;
+}
 .seccionIzquierda{
     width: 70%;
-    margin-left: 200px;
+    margin-left: 170px;
 }
-
 .seccionDerecha{
     width: 30%;
     border-radius: 32px;
     background-color: white;
     padding: 32px;
 }
-
-
-
 #campoIngresoDatos{
     background-color: transparent;
     border-color: transparent;
@@ -53,7 +50,6 @@ main{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-
 }
 #campoIngresoDatos::placeholder {
     color: var(--dark-blue);
@@ -71,7 +67,6 @@ main{
     padding: 3px 8px;
     border-radius:50%;
 }
-
 #mensajeNoEncontrado{
     display: flex; 
     text-align: center;
@@ -97,12 +92,10 @@ main{
     color: #495057;
     align-self:flex-start
 }
-
 .seccionIzquierda .seccionBotones{
     display: flex;
     gap: 24px;
 }
-
 #btnEncriptar{
     background-color: var(--dark-blue);
     color: white;
@@ -111,6 +104,9 @@ main{
     padding: 24px;
     width: 328px;
     border: 0px;
+}
+#btnEncriptar:hover{
+    background-color: #356EA9;
 }
 #btnDesencriptar{
     background-color: #D8DFE8;
@@ -121,7 +117,9 @@ main{
     width: 328px;
     border: 1px solid var(--dark-blue);
 }
-
+#btnDesencriptar:hover{
+    background-color: white;
+}
 #btnCopiar{
     align-self: center;
     background-color: white;
@@ -133,11 +131,66 @@ main{
     border: 1px solid var(--dark-blue);
     margin-top: auto; 
 }
-
+#btnCopiar:hover{
+    background-color: #D8DFE8;
+}
 footer{
     text-align: center;
     color: white;
     background-color: #495057;
     padding: 30px;
-    font: 20px;
+    font-size: 20px;
+}
+
+/*Responsive Tabletas*/
+@media screen and (max-width: 1000px){
+    main{
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+    }
+    .seccionIzquierda{
+        width: 100%;
+        margin-left: auto;
+    }
+    .seccionDerecha{
+        margin-top: 54px;
+        width: 100%;
+        border-radius: 32px;
+        padding: 32px;
+    }
+    #campoIngresoDatos{
+        height: 400px;
+    }
+    #btnCopiar{
+        margin-top: 32px;
+        width: 100%;
+    }
+    #mensajeNoEncontrado img{
+        display: none;
+    }
+    #mensajeNoEncontrado .titulo{
+        margin-top: auto;
+    }
+}
+
+/*Responsive Celulares*/
+@media screen and (max-width: 640px){
+    #logo{
+        width: 30px;
+        height: 48px;
+    }
+    main{
+        margin: 16px;
+    }
+    #campoIngresoDatos{
+        height: 300px;
+    }
+    .seccionIzquierda .seccionBotones{
+        flex-direction: column;
+        gap: 24px;
+    }
+    #btnEncriptar, #btnDesencriptar{
+        width: 100%;
+    }
 }
