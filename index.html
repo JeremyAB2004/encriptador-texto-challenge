@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Encriptador de texto</h1>
+
+    <header>
+        <h1>Encriptador de texto</h1>
+    </header>
+    
 
     <main>
-        <div>
+        <div class="seccionIzquierda">
             <textarea name="campoIngresoDatos" id="campoIngresoDatos" placeholder="Ingrese el texto aquí"></textarea>
-            <span>Solo letras minúsculas y sin acentos</span>
-            <div>
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+            <p id="alertaIngresoDatos"><span>!</span> Solo letras minúsculas y sin acentos</p>
+            <div class="seccionBotones">
+                <button id="btnEncriptar">Encriptar</button>
+                <button id="btnDesencriptar">Desencriptar</button>
             </div>
         </div>
-        <div>
-            <div>
-                <p>Ningún mensaje fue encontrado</p>
+        <div class="seccionDerecha">
+            <div id="mensajeNoEncontrado">
+                <img src="img/Muneco.png" alt="">
+                <p class="titulo">Ningún mensaje fue encontrado</p>
                 <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
             </div>
-            <div>
+            <div id="mensajeEncontrado">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, 
                     sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. 
                     Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.
                 </p>
-                <button>Copiar</button>
+                <button id="btnCopiar">Copiar</button>
             </div>
         </div>
        
     </main>
+
+    <footer>
+        <p>Jeremy Jeshua Acuña Brenes - 2024</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
