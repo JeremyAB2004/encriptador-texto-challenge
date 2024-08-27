@@ -90,7 +90,11 @@ button{
 #mensajeEncontrado p{
     font-size: 24px;
     color: #495057;
-    align-self:flex-start
+    align-self:flex-start;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 .seccionIzquierda .seccionBotones{
     display: flex;
